@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Cliente | Marjorie Peluquería</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body class="registro-page">
+    <div class="registro-container">
+        <div class="registro-header">
+            <a href="admin.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Volver al Panel
+            </a>
+            <h1>
+                <i class="fas fa-user-plus"></i>
+                Registrar Nuevo Cliente
+            </h1>
+        </div>
+        
+        <form id="formCliente" class="registro-form">
+            <div class="form-section">
+                <h3>Datos Personales</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="María García">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="maria@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Tarjeta de Fidelidad</h3>
+                <div class="fidelidad-info">
+                    <div class="tarjeta-preview">
+                        <div class="tarjeta-visual">
+                            <div class="tarjeta-front">
+                                <i class="fas fa-scissors"></i>
+                                <h4>Marjorie Peluquería</h4>
+                                <p>Tarjeta de Fidelidad</p>
+                                <div class="tarjeta-numero" id="tarjetaNumeroPreview">
+                                    FID-0001
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fidelidad-details">
+                        <p><i class="fas fa-info-circle"></i> La tarjeta de fidelidad permite acumular <strong>10 visitas</strong> para reclamar un servicio o producto gratis.</p>
+                        
+                        <div class="form-group">
+                            <label for="tipoPremio">Seleccionar Premio Deseado *</label>
+                            <select id="tipoPremio" name="tipoPremio" required>
+                                <option value="">Elegir premio...</option>
+                                <option value="servicio">Servicio Gratis (Corte o Manicure)</option>
+                                <option value="producto">Producto Gratis (Kit Capilar)</option>
+                                <option value="tratamiento">Tratamiento Capilar</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-outline" onclick="window.location.href='admin.html'">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Registrar Cliente
+                </button>
+            </div>
+        </form>
+        
+        <!-- Mensaje de éxito -->
+        <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <h3>¡Cliente Registrado Exitosamente!</h3>
+                <p>Se ha creado la tarjeta de fidelidad <span id="tarjetaCreada"></span></p>
+                <button class="btn btn-primary" onclick="window.location.href='admin.html'">
+                    Volver al Panel
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin-script.js"></script>
+</body>
+</html>

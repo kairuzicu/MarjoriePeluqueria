@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marjorie Peluquería - Salón de belleza premium con cortes, uñas, cejas, colorimetría y tratamientos capilares">
+    <title>Marjorie Peluquería | Belleza & Estilo Profesional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#inicio" class="logo">
+                    <i class="fas fa-scissors"></i>
+                    Marjorie<span>Peluquería</span>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li class="nav-item"><a href="#productos" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link admin-link" id="adminLink">
+                            <i class="fas fa-user-shield"></i> Admin
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#reservar" class="btn btn-primary btn-small">Reservar Cita</a>
+                    <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-background">
+                <div class="overlay"></div>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <span class="hero-subtitle">Bienvenidos a Marjorie Peluquería</span>
+                        <h1 class="hero-title">
+                            Donde tu <span class="text-gradient">belleza</span> brilla con luz propia
+                        </h1>
+                        <p class="hero-description">
+                            Especialistas en realzar tu belleza natural con servicios premium de peluquería, 
+                            manicure, pedicure, diseño de cejas, colorimetría y tratamientos capilares.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#servicios" class="btn btn-primary btn-large">
+                                <i class="fas fa-scissors"></i>
+                                Nuestros Servicios
+                            </a>
+                            <a href="#reservar" class="btn btn-outline btn-large">
+                                <i class="far fa-calendar-alt"></i>
+                                Agendar Visita
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Años de experiencia</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3K+</span>
+                                <span class="stat-label">Clientes felices</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Estilistas expertos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Peluquería Premium</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Uñas de diseño</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cejas perfectas</span>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-spa"></i>
+                                <span>Marjorie Peluquería</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="services-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-subtitle">Nuestros Servicios</span>
+                    <h2 class="section-title">
+                        Experiencia <span class="text-gradient">Premium</span> en Cada Detalle
+                    </h2>
+                    <p class="section-description">
+                        Desde cortes de precisión hasta tratamientos de belleza exclusivos, 
+                        ofrecemos servicios personalizados para realzar tu estilo único.
+                    </p>
+                </div>
+
+                <div class="services-tabs animate-on-scroll">
+                    <div class="tabs-container">
+                        <button class="tab-btn active" data-category="todos">
+                            <i class="fas fa-star"></i>
+                            <span>Todos</span>
+                        </button>
+                        <button class="tab-btn" data-category="peluqueria">
+                            <i class="fas fa-cut"></i>
+                            <span>Peluquería</span>
+                        </button>
+                        <button class="tab-btn" data-category="unas">
+                            <i class="fas fa-hand-sparkles"></i>
+                            <span>Uñas</span>
+                        </button>
+                        <button class="tab-btn" data-category="cejas">
+                            <i class="fas fa-eye"></i>
+                            <span>Cejas & Pestañas</span>
+                        </button>
+                        <button class="tab-btn" data-category="colorimetria">
+                            <i class="fas fa-palette"></i>
+                            <span>Colorimetría</span>
+                        </button>
+                        <button class="tab-btn" data-category="tratamientos">
+                            <i class="fas fa-leaf"></i>
+                            <span>Tratamientos</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Servicio 1: Corte de Dama Premium -->
+                    <div class="service-card" data-category="peluqueria todos">
+                        <div class="service-badge">Popular</div>
+                        <div class="service-image">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Corte Premium Dama</h3>
+                                <span class="service-price">$35</span>
+                            </div>
+                            <p class="service-description">
+                                Corte personalizado con técnicas modernas, incluye lavado, 
+                                asesoría de estilo y producto de acabado profesional.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 45 min</li>
+                                <li><i class="fas fa-star"></i> Estilista Senior</li>
+                                <li><i class="fas fa-coffee"></i> Café cortesía</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Peinado Profesional -->
+                    <div class="service-card" data-category="peluqueria todos">
+                        <div class="service-badge">Completo</div>
+                        <div class="service-image">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Peinado Profesional</h3>
+                                <span class="service-price">$45</span>
+                            </div>
+                            <p class="service-description">
+                                Peinado para ocasiones especiales con técnicas premium, 
+                                fijación duradera y acabado de revista.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 60 min</li>
+                                <li><i class="fas fa-crown"></i> Acabado VIP</li>
+                                <li><i class="fas fa-gem"></i> Productos premium</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Corte Infantil -->
+                    <div class="service-card" data-category="peluqueria todos">
+                        <div class="service-image">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Corte Infantil</h3>
+                                <span class="service-price">$20</span>
+                            </div>
+                            <p class="service-description">
+                                Corte divertido y profesional para niños, con mucha 
+                                paciencia y cariño. Incluye globo de regalo.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 30 min</li>
+                                <li><i class="fas fa-gift"></i> Globo de regalo</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Manicure Clásico -->
+                    <div class="service-card" data-category="unas todos">
+                        <div class="service-badge">Básico</div>
+                        <div class="service-image">
+                            <i class="fas fa-hand"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Manicure Clásico</h3>
+                                <span class="service-price">$20</span>
+                            </div>
+                            <p class="service-description">
+                                Limado, cutículas, exfoliación, hidratación y 
+                                esmaltado semipermanente con 50+ colores.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 40 min</li>
+                                <li><i class="fas fa-palette"></i> 50+ colores</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5: Uñas Acrílicas -->
+                    <div class="service-card featured" data-category="unas todos">
+                        <div class="service-badge highlight">Destacado</div>
+                        <div class="service-image">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Uñas Acrílicas Premium</h3>
+                                <span class="service-price">$45</span>
+                            </div>
+                            <p class="service-description">
+                                Esculpidas con técnica profesional, diseño personalizado 
+                                y decoración con cristales Swarovski.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 90 min</li>
+                                <li><i class="fas fa-magic"></i> Diseño único</li>
+                                <li><i class="fas fa-gem"></i> Cristales incluidos</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6: Pedicure Spa -->
+                    <div class="service-card" data-category="unas todos">
+                        <div class="service-image">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Pedicure Spa</h3>
+                                <span class="service-price">$35</span>
+                            </div>
+                            <p class="service-description">
+                                Tratamiento completo con masaje relajante, exfoliación, 
+                                hidratación profunda y esmaltado perfecto.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 60 min</li>
+                                <li><i class="fas fa-hot-tub"></i> Masaje relajante</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 7: Diseño de Cejas -->
+                    <div class="service-card" data-category="cejas todos">
+                        <div class="service-badge">Precisión</div>
+                        <div class="service-image">
+                            <i class="fas fa-chess-board"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Diseño de Cejas</h3>
+                                <span class="service-price">$18</span>
+                            </div>
+                            <p class="service-description">
+                                Diseño personalizado según tu rostro con cera, pinza 
+                                y tijera. Incluye tinte si lo deseas.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 25 min</li>
+                                <li><i class="fas fa-draw-polygon"></i> Visagismo</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 8: Lifting de Pestañas -->
+                    <div class="service-card" data-category="cejas todos">
+                        <div class="service-image">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Lifting de Pestañas</h3>
+                                <span class="service-price">$40</span>
+                            </div>
+                            <p class="service-description">
+                                Elevación y curvatura natural de pestañas que dura 
+                                hasta 8 semanas. Mirada más amplia y expresiva.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 60 min</li>
+                                <li><i class="fas fa-calendar"></i> Dura 8 semanas</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 9: Microblading -->
+                    <div class="service-card" data-category="cejas todos">
+                        <div class="service-badge">Premium</div>
+                        <div class="service-image">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Microblading</h3>
+                                <span class="service-price">$150</span>
+                            </div>
+                            <p class="service-description">
+                                Técnica semi-permanente pelo a pelo para cejas 
+                                perfectas. Incluye retoque a los 45 días.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 2.5 horas</li>
+                                <li><i class="fas fa-certificate"></i> Certificado</li>
+                                <li><i class="fas fa-sync"></i> Retoque incluido</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 10: Color Global -->
+                    <div class="service-card" data-category="colorimetria todos">
+                        <div class="service-image">
+                            <i class="fas fa-fill-drip"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Color Global</h3>
+                                <span class="service-price">$65</span>
+                            </div>
+                            <p class="service-description">
+                                Tinte profesional con productos de alta gama que 
+                                protegen y nutren tu cabello.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 2 horas</li>
+                                <li><i class="fas fa-leaf"></i> Productos orgánicos</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 11: Balayage -->
+                    <div class="service-card" data-category="colorimetria todos">
+                        <div class="service-badge">Tendencia</div>
+                        <div class="service-image">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Balayage Francés</h3>
+                                <span class="service-price">$120</span>
+                            </div>
+                            <p class="service-description">
+                                Técnica de barrido que crea un degradado natural y 
+                                luminoso de bajo mantenimiento.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 3 horas</li>
+                                <li><i class="fas fa-sparkles"></i> Efecto natural</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 12: Botox Capilar -->
+                    <div class="service-card" data-category="tratamientos todos">
+                        <div class="service-image">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Botox Capilar</h3>
+                                <span class="service-price">$85</span>
+                            </div>
+                            <p class="service-description">
+                                Tratamiento intensivo que repara, hidrata y elimina 
+                                el frizz dejando el cabello sedoso y brillante.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 1.5 horas</li>
+                                <li><i class="fas fa-droplet"></i> Hidratación profunda</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 13: Alisado -->
+                    <div class="service-card" data-category="tratamientos todos">
+                        <div class="service-image">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <h3>Alisado Japonés</h3>
+                                <span class="service-price">$200</span>
+                            </div>
+                            <p class="service-description">
+                                Alisado permanente que transforma el cabello rebelde 
+                                en lacio, brillante y manejable.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-clock"></i> 4 horas</li>
+                                <li><i class="fas fa-infinity"></i> Resultado permanente</li>
+                            </ul>
+                            <a href="#reservar" class="service-link">
+                                Reservar <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-footer animate-on-scroll">
+                    <a href="#" class="btn btn-outline btn-large">
+                        <i class="fas fa-list"></i>
+                        Ver Lista Completa de Precios
+                    </a>
+                    <p class="services-note">
+                        * Todos nuestros servicios incluyen consultoría personalizada
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Productos -->
+        <section id="productos" class="products-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-subtitle">Nuestros Productos</span>
+                    <h2 class="section-title">
+                        Belleza de lujo <span class="text-gradient">para tu cuidado diario</span>
+                    </h2>
+                    <p class="section-description">
+                        Seleccionamos productos exclusivos para mantener tu estilo impecable en casa.
+                    </p>
+                </div>
+
+                <div class="products-grid animate-on-scroll">
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Kit de Cuidado Capilar</h3>
+                        <p>Shampoo suave, mascarilla nutritiva y aceite reparador para brillo profesional.</p>
+                        <span class="product-price">$28</span>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <h3>Esmalte Premium</h3>
+                        <p>Fórmula de larga duración con acabado gel y secado rápido.</p>
+                        <span class="product-price">$12</span>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Set de Colorimetría</h3>
+                        <p>Polvos, tintes y crema protectora para un color vibrante y saludable.</p>
+                        <span class="product-price">$34</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Galería -->
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-subtitle">Galería</span>
+                    <h2 class="section-title">
+                        Inspiración <span class="text-gradient">en cada detalle</span>
+                    </h2>
+                    <p class="section-description">
+                        Descubre looks reales creados por nuestro equipo de estilistas expertos.
+                    </p>
+                </div>
+
+                <div class="gallery-grid animate-on-scroll">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <i class="fas fa-female"></i>
+                            Look 1
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                            Look 2
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <i class="fas fa-gem"></i>
+                            Look 3
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <i class="fas fa-sparkles"></i>
+                            Look 4
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Reservar -->
+        <section id="reservar" class="reserve-section">
+            <div class="container reserve-grid animate-on-scroll">
+                <div class="reserve-content">
+                    <span class="section-subtitle">Reservar Cita</span>
+                    <h2 class="section-title">
+                        Tu próxima transformación <span class="text-gradient">empieza aquí</span>
+                    </h2>
+                    <p class="section-description">
+                        Elige fecha, servicio y estilista. Te acompañamos en cada paso para que vivas
+                        una experiencia premium completa en Marjorie Peluquería.
+                    </p>
+                    <ul class="reserve-features">
+                        <li><i class="fas fa-calendar-check"></i> Confirmación inmediata</li>
+                        <li><i class="fas fa-clock"></i> Horarios flexibles</li>
+                        <li><i class="fas fa-award"></i> Servicio personalizado</li>
+                    </ul>
+                </div>
+
+                <form class="reserve-form" autocomplete="off">
+                    <label>
+                        Nombre completo
+                        <input type="text" placeholder="Tu nombre" required>
+                    </label>
+                    <label>
+                        Teléfono o WhatsApp
+                        <input type="tel" placeholder="+57 300 000 0000" required>
+                    </label>
+                    <label>
+                        Servicio deseado
+                        <select required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="peluqueria">Peluquería</option>
+                            <option value="unas">Uñas</option>
+                            <option value="cejas">Cejas & Pestañas</option>
+                            <option value="colorimetria">Colorimetría</option>
+                            <option value="tratamientos">Tratamientos</option>
+                        </select>
+                    </label>
+                    <label>
+                        Fecha preferida
+                        <input type="date" required>
+                    </label>
+                    <button class="btn btn-primary btn-large" type="submit">
+                        Enviar solicitud
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-subtitle">Contacto</span>
+                    <h2 class="section-title">
+                        Estamos listos <span class="text-gradient">para atenderte</span>
+                    </h2>
+                    <p class="section-description">
+                        Visítanos o escríbenos para resolver tus dudas y reservar tu cita con facilidad.
+                    </p>
+                </div>
+
+                <div class="contact-grid animate-on-scroll">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Ubicación</h3>
+                        <p>Cra. 77A #64c-26, Bogotá</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Teléfono</h3>
+                        <p>+57 3114810611</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario</h3>
+                        <p>Lun - Sáb: 10:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#inicio" class="logo footer-logo">
+                    <i class="fas fa-scissors"></i>
+                    Marjorie<span>Peluquería</span>
+                </a>
+                <p>Eres unica y mereces lo mejor en belleza.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#productos">Productos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573114810611?text=Hola%20Marjorie%20Peluquería,%20quiero%20reservar%20una%20cita" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== MODAL DE LOGIN ADMIN ===== -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-overlay" id="loginOverlay"></div>
+        <div class="login-box">
+            <button class="login-close" id="loginClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="login-header-box">
+                <div class="login-icon-circle">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2>Panel Administrativo</h2>
+                <p>Ingresa tus credenciales para acceder</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        placeholder="Usuario" 
+                        required 
+                        autocomplete="off"
+                    >
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-key"></i>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Contraseña" 
+                        required
+                    >
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Recordarme</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Iniciar Sesión
+                </button>
+                
+                <div class="login-error" id="loginError">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="loginErrorMessage"></span>
+                </div>
+            </form>
+            
+            <div class="login-footer-box">
+                <p><i class="fas fa-shield-alt"></i> Acceso restringido solo para administradores</p>
+                <p class="login-hint">Usuario: <strong>admin</strong> | Contraseña: <strong>marjorie2024</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

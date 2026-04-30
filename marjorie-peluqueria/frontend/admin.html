@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin | Marjorie Peluquería</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-scissors"></i>
+                <h2>Marjorie<span>Admin</span></h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-tab="dashboard">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#reservas" class="nav-item" data-tab="reservas">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Reservas</span>
+                    <span class="badge" id="reservasCount">0</span>
+                </a>
+                <a href="#clientes" class="nav-item" data-tab="clientes">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+                <a href="#fidelidad" class="nav-item" data-tab="fidelidad">
+                    <i class="fas fa-id-card"></i>
+                    <span>Tarjetas Fidelidad</span>
+                </a>
+                <a href="#historial" class="nav-item" data-tab="historial">
+                    <i class="fas fa-history"></i>
+                    <span>Historial</span>
+                </a>
+                <a href="clientes.html" class="nav-item" target="_blank">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Registrar Cliente</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Volver al Sitio
+                </a>
+            </div>
+            <div class="sidebar-footer">
+                <a href="#" class="btn-back" onclick="cerrarSesion()" style="color: #f44336; margin-bottom: 0.5rem;">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Volver al Sitio
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Panel de Administración</h1>
+                </div>
+                <div class="header-right">
+                    <div class="date-display">
+                        <i class="far fa-calendar-alt"></i>
+                        <span id="currentDate"></span>
+                    </div>
+                    <button class="btn-refresh" onclick="location.reload()">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Contenido Dinámico -->
+            <div class="admin-content">
+                <!-- DASHBOARD -->
+                <section id="dashboard" class="tab-content active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #e3f2fd; color: #1976d2;">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Reservas Hoy</h3>
+                                <p class="stat-number" id="reservasHoy">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #e8f5e9; color: #388e3c;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Clientes Totales</h3>
+                                <p class="stat-number" id="clientesTotales">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #fff3e0; color: #f57c00;">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Tarjetas Activas</h3>
+                                <p class="stat-number" id="tarjetasActivas">0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background: #fce4ec; color: #d81b60;">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Premios Pendientes</h3>
+                                <p class="stat-number" id="premiosPendientes">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Últimas Reservas</h3>
+                            <div class="table-container" id="ultimasReservas">
+                                <p class="no-data">No hay reservas recientes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <h3>Próximos Premios</h3>
+                            <div class="table-container" id="proximosPremios">
+                                <p class="no-data">No hay premios pendientes</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- RESERVAS -->
+                <section id="reservas" class="tab-content">
+                    <div class="section-header">
+                        <h2>Gestión de Reservas</h2>
+                        <div class="section-actions">
+                            <input type="text" id="searchReservas" placeholder="Buscar reserva..." class="search-input">
+                            <select id="filterEstado" class="filter-select">
+                                <option value="todas">Todas</option>
+                                <option value="pendiente">Pendientes</option>
+                                <option value="confirmada">Confirmadas</option>
+                                <option value="completada">Completadas</option>
+                                <option value="cancelada">Canceladas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container" id="tablaReservas">
+                        <p class="no-data">No hay reservas registradas</p>
+                    </div>
+                </section>
+
+                <!-- CLIENTES -->
+                <section id="clientes" class="tab-content">
+                    <div class="section-header">
+                        <h2>Clientes Registrados</h2>
+                        <div class="section-actions">
+                            <input type="text" id="searchClientes" placeholder="Buscar cliente..." class="search-input">
+                            <a href="clientes.html" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Nuevo Cliente
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-container" id="tablaClientes">
+                        <p class="no-data">No hay clientes registrados</p>
+                    </div>
+                </section>
+
+                <!-- TARJETAS DE FIDELIDAD -->
+                <section id="fidelidad" class="tab-content">
+                    <div class="section-header">
+                        <h2>Tarjetas de Fidelidad</h2>
+                    </div>
+                    <div class="fidelidad-grid" id="tarjetasGrid">
+                        <p class="no-data">No hay tarjetas de fidelidad activas</p>
+                    </div>
+                </section>
+
+                <!-- HISTORIAL -->
+                <section id="historial" class="tab-content">
+                    <div class="section-header">
+                        <h2>Historial de Actividad</h2>
+                    </div>
+                    <div class="timeline" id="historialTimeline">
+                        <p class="no-data">No hay actividad registrada</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
+<!-- atera TI -->
